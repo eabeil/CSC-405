@@ -7,4 +7,7 @@ def fib(n):
         return fib(n - 1) + fib(n - 2)
 
 ask = int(input("Enter a number: "))
-print(*[fib(i) for i in range(ask)])
+print(*[fib(i) for i in range(ask)]) 
+
+
+print(10 // 3)
