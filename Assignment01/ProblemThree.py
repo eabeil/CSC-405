@@ -43,3 +43,28 @@ for row in rows:
         print(f"{gender}: {count}")
 
 
+# part c 
+
+
+gender_age_sum = {}
+gender_age_count = {}
+
+for row in rows:
+    gender = row['sex']
+    age = float(row['age'])
+
+    if gender not in gender_age_sum:
+        gender_age_sum[gender] = 0
+        gender_age_count[gender] = 0
+
+
+    gender_age_sum[gender] += age
+    gender_age_count[gender] += 1
+
+
+
+    for gender, total_age in gender_age_sum.items():
+        average_age = total_age / gender_age_count[gender]
+        print(f"{gender} Average age = {average_age:.2f}")
+        
+
