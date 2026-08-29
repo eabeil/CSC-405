@@ -11,3 +11,35 @@ with open('insurance.csv') as file:
 
 print(f"Number of records: {len(rows)}")
 print(f"Columns: {columns}")
+
+# part three computing stats
+
+# part a average of age columns
+
+
+sum_age = 0
+
+for row in rows:
+    sum_age += float(row['age'])
+
+average_age = sum_age / len(rows)
+
+print(f"Average age: {average_age:.2f}")
+
+# part b count record for each gender
+
+gender_count = {}
+
+for row in rows:
+    gender = row['sex']
+    if gender not in gender_count:
+        gender_count[gender] = 0
+
+    gender_count[gender] += 1
+
+    print ('Gender count: ', gender_count)
+
+    for gender, count in gender_count.items():
+        print(f"{gender}: {count}")
+
+
