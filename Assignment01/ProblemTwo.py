@@ -8,6 +8,3 @@ def fib(n):
 
 ask = int(input("Enter a number: "))
 print(*[fib(i) for i in range(ask)]) 
-
-
-print(10 // 3)

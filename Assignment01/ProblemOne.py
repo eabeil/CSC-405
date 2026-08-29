@@ -4,6 +4,3 @@ x = int(input("Enter a number: "))
 
 
 print(*[item for item in a if item < x])
-
-_my = int(input("Enter a number: "))
-
